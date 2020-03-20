@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GameOfLife"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\home\;CMake Files\..\..\..\home\nico\;CMake Files\..\..\..\home\nico\Library\;CMake Files\..\..\..\home\nico\Library\Frameworks\;CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gameoflife">
+				<Option output="/root/CLionProjects/GameOfLife/cmake-build-debug/Gameoflife" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="/home/nico/Library/Frameworks/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gameoflife"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Gameoflife/fast">
+				<Option output="/root/CLionProjects/GameOfLife/cmake-build-debug/Gameoflife" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="/home/nico/Library/Frameworks/SFML-2.5.1/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 Gameoflife/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/root/CLionProjects/GameOfLife/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/CLionProjects/GameOfLife/GameOfLife.cpp">
+			<Option target="Gameoflife"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/GameOfLife.h">
+			<Option target="Gameoflife"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/main.cpp">
+			<Option target="Gameoflife"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../home/nico/Library/Frameworks/SFML251static/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../home/nico/Library/Frameworks/SFML251static/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../home/nico/Library/Frameworks/SFML251static/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../home/nico/Library/Frameworks/SFML251static/SFMLStaticTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
