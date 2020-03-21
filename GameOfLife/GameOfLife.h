@@ -62,6 +62,7 @@ public:
     std::vector<int>  aliveCells; // Fill this vector in genPop()!
     void updateAliveCells();//Call this in drawAliveCells()
     sf::Font font;
+
     GameOfLife(sf::RenderWindow &window):_window(window){
         _CellMap.reserve(_ROWSIZE*_COLSIZE);
         _population = 0;

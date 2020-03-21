@@ -5,7 +5,7 @@
 		<Option title="GameOfLife"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\home\;CMake Files\..\..\..\home\nico\;CMake Files\..\..\..\home\nico\Library\;CMake Files\..\..\..\home\nico\Library\Frameworks\;CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\home\;CMake Files\..\..\..\home\nico\;CMake Files\..\..\..\home\nico\Library\;CMake Files\..\..\..\home\nico\Library\Frameworks\;CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\lib\;CMake Files\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\usr\local\lib\cmake\ImGui-SFML\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/root/CLionProjects/GameOfLife/cmake-build-debug"/>
@@ -34,6 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DIMGUI_USER_CONFIG=&quot;imconfig-SFML.h&quot;"/>
 					<Add option="-DSFML_STATIC"/>
 					<Add directory="/home/nico/Library/Frameworks/SFML-2.5.1/include"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -59,6 +60,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DIMGUI_USER_CONFIG=&quot;imconfig-SFML.h&quot;"/>
 					<Add option="-DSFML_STATIC"/>
 					<Add directory="/home/nico/Library/Frameworks/SFML-2.5.1/include"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -111,6 +113,12 @@
 		</Unit>
 		<Unit filename="/root/CLionProjects/GameOfLife/../../../home/nico/Library/Frameworks/SFML251static/SFMLStaticTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\home\nico\Library\Frameworks\SFML251static\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../usr/local/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\ImGui-SFML\"/>
+		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/../../../usr/local/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\lib\cmake\ImGui-SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

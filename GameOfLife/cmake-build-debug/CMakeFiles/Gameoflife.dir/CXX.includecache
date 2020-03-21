@@ -676,17 +676,27 @@ SFML/Config.hpp
 
 /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-/root/CLionProjects/GameOfLife/GameOfLife.cpp
-iostream
--
-sstream
--
-GameOfLife.h
-/root/CLionProjects/GameOfLife/GameOfLife.h
-
 /root/CLionProjects/GameOfLife/GameOfLife.h
 vector
 -
 SFML/Graphics.hpp
 -
+
+/root/CLionProjects/GameOfLife/main.cpp
+iostream
+-
+imgui.h
+/root/CLionProjects/GameOfLife/imgui.h
+imgui-SFML.h
+/root/CLionProjects/GameOfLife/imgui-SFML.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Window/Event.hpp
+-
+chrono
+-
+sstream
+-
+GameOfLife.h
+/root/CLionProjects/GameOfLife/GameOfLife.h
 

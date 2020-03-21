@@ -223,6 +223,9 @@ GameOfLife_BINARY_DIR:STATIC=/root/CLionProjects/GameOfLife/cmake-build-debug
 //Value Computed by CMake
 GameOfLife_SOURCE_DIR:STATIC=/root/CLionProjects/GameOfLife
 
+//The directory containing a CMake configuration file for ImGui-SFML.
+ImGui-SFML_DIR:PATH=/usr/local/lib/cmake/ImGui-SFML
+
 //Path to a library.
 Ogg_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libogg.so
 

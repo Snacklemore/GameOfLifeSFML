@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/x86_64-linux-gnu-g++-7
 CXX_FLAGS = -g   -std=gnu++11
 
-CXX_DEFINES = -DSFML_STATIC
+CXX_DEFINES = -DIMGUI_USER_CONFIG=\"imconfig-SFML.h\" -DSFML_STATIC
 
 CXX_INCLUDES = -isystem /home/nico/Library/Frameworks/SFML-2.5.1/include 
 

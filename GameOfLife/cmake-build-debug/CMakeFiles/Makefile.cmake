@@ -37,6 +37,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.5/CMakeSystem.cmake"
+  "/usr/local/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-noconfig.cmake"
+  "/usr/local/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake"
   )
 
 # The corresponding makefile is:

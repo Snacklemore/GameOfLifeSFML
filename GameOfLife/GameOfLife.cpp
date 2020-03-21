@@ -453,14 +453,17 @@ void GameOfLife::LifeCycle() {
 }
 //TODO:Function to to set population with mousehold, giving back Index of set Cell!
 void GameOfLife::genPop() {
+    int popC = 0;
     for(int i = 1024;i<50000;i++){
 
 
 
         _CellMap[i]._t_cell = Celltype::PREY;
         aliveCells.push_back(i);
+        popC++;
 
     }
+    _population = popC;
 
 }
 

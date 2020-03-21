@@ -94,6 +94,7 @@ Gameoflife_EXTERNAL_OBJECTS =
 Gameoflife: CMakeFiles/Gameoflife.dir/main.cpp.o
 Gameoflife: CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o
 Gameoflife: CMakeFiles/Gameoflife.dir/build.make
+Gameoflife: /usr/local/lib/libImGui-SFML.a
 Gameoflife: /home/nico/Library/Frameworks/SFML251static/lib/libsfml-system-s.a
 Gameoflife: /home/nico/Library/Frameworks/SFML251static/lib/libsfml-window-s.a
 Gameoflife: /home/nico/Library/Frameworks/SFML251static/lib/libsfml-graphics-s.a
@@ -104,10 +105,10 @@ Gameoflife: /usr/lib/x86_64-linux-gnu/libX11.so
 Gameoflife: /usr/lib/x86_64-linux-gnu/libXrandr.so
 Gameoflife: /usr/lib/x86_64-linux-gnu/libX11.so
 Gameoflife: /usr/lib/x86_64-linux-gnu/libXrandr.so
-Gameoflife: /usr/lib/x86_64-linux-gnu/libGL.so
-Gameoflife: /usr/lib/x86_64-linux-gnu/libGLU.so
 Gameoflife: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 Gameoflife: /usr/lib/x86_64-linux-gnu/libfreetype.so
+Gameoflife: /usr/lib/x86_64-linux-gnu/libGL.so
+Gameoflife: /usr/lib/x86_64-linux-gnu/libGLU.so
 Gameoflife: CMakeFiles/Gameoflife.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/CLionProjects/GameOfLife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Gameoflife"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Gameoflife.dir/link.txt --verbose=$(VERBOSE)
