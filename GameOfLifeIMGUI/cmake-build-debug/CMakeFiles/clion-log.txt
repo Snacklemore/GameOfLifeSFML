@@ -1,5 +1,0 @@
-/home/nico/Documents/clion-2019.1.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/usr/bin/x86_64-linux-gnu-g++-7 -G "CodeBlocks - Unix Makefiles" /root/CLionProjects/GameOfLife
--- Found SFML 2.5.1 in /home/nico/Library/Frameworks/SFML251static
--- Configuring done
--- Generating done
--- Build files have been written to: /root/CLionProjects/GameOfLife/cmake-build-debug
