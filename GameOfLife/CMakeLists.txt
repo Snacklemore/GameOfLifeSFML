@@ -9,5 +9,5 @@ set(ImGui-SFML_DIR "/home/nico/Documents/imgui/localIMGUI")
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 find_package(ImGui-SFML REQUIRED)
 
-add_executable(${EXECUTABLE_NAME} main.cpp GameOfLife.cpp GameOfLife.h)
+add_executable(${EXECUTABLE_NAME} main.cpp GameOfLife.cpp GameOfLife.h RingBuffer.h)
 target_link_libraries(${EXECUTABLE_NAME} PRIVATE ImGui-SFML::ImGui-SFML sfml-system sfml-window sfml-graphics )

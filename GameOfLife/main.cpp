@@ -11,12 +11,16 @@
 static void showPopulationCount(bool* p_open,int *pop);
 
 static void showLifeCycleCount(bool *p_open,long *cycle);
+static void showPopulationGraph(bool *p_open,RingBuffer *rb,float *scaleMax);
 
-static void ShowTool(bool* p_open,bool* keyPressed,bool*showPop,int *pop,bool*showCycle,long *cycle, long long int *lifeCycleTime);
+static void ShowTool(bool* p_open,bool* keyPressed,
+        bool*showPop,int *pop,bool*showCycle,
+        long *cycle, long long int *lifeCycleTime,
+        sf::RenderWindow *window,bool *showPopGraph,RingBuffer *rb,float *scaleMax);
 
 int main() {
 
-    sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT),"Test",sf::Style::None);
+    sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT),"Test",sf::Style::Titlebar);
     window.setPosition(sf::Vector2i(0,0));
     ImGui::SFML::Init(window);
     GameOfLife GOL(window);
@@ -25,24 +29,19 @@ int main() {
     window.setKeyRepeatEnabled(true);
     bool keyPressed=false;
     bool devMenuToggled = false;
-
+    RingBuffer ringBuffer(10);
     Cell** cellptr;
     Cell* it;
     GOL.genPop();
     sf::Clock deltaClock;
     long long int LifeCycleExecTime = 0;
-    bool *showCycle;
-    bool d = true;
-    showCycle = &d;
-    bool *showPop;
-    bool c = true;
-    showPop = &c;
-    bool *openPopCount;
-    bool b = true;
-    openPopCount = &b;
-    bool *open;
-    bool a = true;
-    open = &a;
+    float scaleMax = 10000.f;
+    bool showPopGraph = false;
+    bool showCycle = true;
+    bool showPop = true ;
+    bool openPopCount = true;
+    bool open = true;
+
     //*toolActive = false;
     while (window.isOpen()){
         sf::Event event;
@@ -51,6 +50,12 @@ int main() {
             if(event.type==sf::Event::Closed)
             {
                 window.close();
+            }
+            if (event.type == sf::Event::Resized)
+            {
+                // update the view to the new size of the window
+                sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+                window.setView(sf::View(visibleArea));
             }
             if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
             {
@@ -93,10 +98,10 @@ int main() {
         ImGui::SetNextWindowSize(ImVec2(400, 200), ImGuiCond_FirstUseEver);
         if (devMenuToggled)
         {
-            *open = true;
+            open = true;
             devMenuToggled = false;
         }
-        ShowTool(open,&keyPressed,showPop,&GOL._population,showCycle,&GOL._cycleCount,&LifeCycleExecTime);
+        ShowTool(&open,&keyPressed,&showPop,&GOL._population,&showCycle,&GOL._cycleCount,&LifeCycleExecTime,&window,&showPopGraph,&ringBuffer,&scaleMax);
 
 
         window.clear();
@@ -162,14 +167,14 @@ static void showLifeCycleCount(bool *p_open,long *cycle)
     ImGui::End();
 }
 
-static void ShowTool(bool* p_open,bool* keyPressed,bool*showPop,int *pop,bool*showCycle,long *cycle,long long int *timeFloat)
+static void ShowTool(bool* p_open,bool* keyPressed,bool*showPop,int *pop,bool*showCycle,long *cycle,long long int *timeFloat,sf::RenderWindow *window,bool *showPopGraph,RingBuffer *rb,float *scaleMax)
 {
     if (!*p_open)
         return;
     ImGui::Begin("Tool",p_open,ImGuiWindowFlags_MenuBar);
 
 
-
+    rb->add((float)*pop);
     if(ImGui::BeginMenuBar())
     {
         if(ImGui::BeginMenu("Settings"))
@@ -193,9 +198,16 @@ static void ShowTool(bool* p_open,bool* keyPressed,bool*showPop,int *pop,bool*sh
     {
         showLifeCycleCount(showCycle,cycle);
     }
-    //const float my_values[] = { 4000.2f, 20000.1f, 1000, 1500.1f, 10000.f, 2000.2f };
-    //ImGui::PlotLines("PopulationGraph", my_values, IM_ARRAYSIZE(my_values), 0, NULL, 0.0f, 100000.0f, ImVec2(0,80));
+    ImGui::Checkbox("Show Population Graph",showPopGraph);
+    if(*showPopGraph)
+    {
+        showPopulationGraph(showPopGraph,rb,scaleMax);
+    }
 
+    if ( ImGui::Button("Resize to 512x512(Unstable!!)"))
+    {
+        window->setSize(sf::Vector2u(512,512));
+    }
     if (ImGui::Button("Start Sim"))
     {
         *keyPressed = true;
@@ -205,5 +217,17 @@ static void ShowTool(bool* p_open,bool* keyPressed,bool*showPop,int *pop,bool*sh
         *keyPressed = false;
 
     }
+    ImGui::End();
+}
+static void showPopulationGraph(bool* p_open,RingBuffer *rb,float *scaleMax)
+{
+    if (!*p_open)
+        return;
+
+
+    ImGui::Begin("Population Graph",p_open);
+    ImGui::SliderFloat("Set Maximum",scaleMax, 0.0f, 10000.0f, "Maximum Value");
+
+    ImGui::PlotLines("PopulationGraph", rb->getBufferArray(), 10, 0, NULL, 0.0f, *scaleMax, ImVec2(500,100));
     ImGui::End();
 }

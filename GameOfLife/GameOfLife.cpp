@@ -467,20 +467,4 @@ void GameOfLife::genPop() {
 
 }
 
-void GameOfLife::displayPop() {
-    std::stringstream popstring;
-    popstring << _population;
-    sf::Text display(popstring.str(),font,32);
-    _window.draw(display);
-
-}
-
-void GameOfLife::displayCycleCount() {
-    std::stringstream cyclestring;
-    cyclestring << _cycleCount;
-    sf::Text display(cyclestring.str(),font,32);
-    display.setPosition(900,0);
-    _window.draw(display);
-
-}
 

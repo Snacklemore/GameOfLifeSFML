@@ -96,6 +96,9 @@
 		<Unit filename="/root/CLionProjects/GameOfLife/GameOfLife.h">
 			<Option target="Gameoflife"/>
 		</Unit>
+		<Unit filename="/root/CLionProjects/GameOfLife/RingBuffer.h">
+			<Option target="Gameoflife"/>
+		</Unit>
 		<Unit filename="/root/CLionProjects/GameOfLife/main.cpp">
 			<Option target="Gameoflife"/>
 		</Unit>

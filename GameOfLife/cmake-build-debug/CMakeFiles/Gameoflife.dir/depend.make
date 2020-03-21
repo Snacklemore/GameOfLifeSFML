@@ -77,6 +77,7 @@ CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o: /home/nico/Library/Frameworks/SFML-2
 CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o: ../GameOfLife.cpp
 CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o: ../GameOfLife.h
+CMakeFiles/Gameoflife.dir/GameOfLife.cpp.o: ../RingBuffer.h
 
 CMakeFiles/Gameoflife.dir/main.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Config.hpp
 CMakeFiles/Gameoflife.dir/main.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Graphics.hpp
@@ -153,5 +154,6 @@ CMakeFiles/Gameoflife.dir/main.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/i
 CMakeFiles/Gameoflife.dir/main.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/Gameoflife.dir/main.cpp.o: /home/nico/Library/Frameworks/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/Gameoflife.dir/main.cpp.o: ../GameOfLife.h
+CMakeFiles/Gameoflife.dir/main.cpp.o: ../RingBuffer.h
 CMakeFiles/Gameoflife.dir/main.cpp.o: ../main.cpp
 

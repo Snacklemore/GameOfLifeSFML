@@ -681,6 +681,10 @@ vector
 -
 SFML/Graphics.hpp
 -
+RingBuffer.h
+/root/CLionProjects/GameOfLife/RingBuffer.h
+
+/root/CLionProjects/GameOfLife/RingBuffer.h
 
 /root/CLionProjects/GameOfLife/main.cpp
 iostream

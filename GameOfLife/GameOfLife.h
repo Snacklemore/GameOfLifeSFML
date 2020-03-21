@@ -8,8 +8,10 @@
 
 #include <vector>
 #include <SFML/Graphics.hpp>
-#define HEIGHT 512
-#define WIDTH 1024
+#include "RingBuffer.h"
+#define HEIGHT 512 // replace defines with MembersVariables of GameOfLife class
+#define WIDTH 1024 // to enable resizing the board, check on window
+//resizing for SFML
 
 enum class Celltype{
     PREY = 1,
@@ -48,8 +50,7 @@ private:
     sf::RenderWindow &_window;
 
 public:
-    sf::Text            _populationDisplay;
-    sf::Text            _cycleCountDisplay;
+
     int                 _ROWSIZE=WIDTH/2;
     int                 _COLSIZE=HEIGHT/2;
     int                 _population;
@@ -60,16 +61,14 @@ public:
     sf::VertexArray   drawCell();
     sf::VertexArray   drawAliveCells();
     std::vector<int>  aliveCells; // Fill this vector in genPop()!
-    void updateAliveCells();//Call this in drawAliveCells()
     sf::Font font;
 
     GameOfLife(sf::RenderWindow &window):_window(window){
         _CellMap.reserve(_ROWSIZE*_COLSIZE);
         _population = 0;
         _cycleCount = 0; 
-        font.loadFromFile("arial.ttf");
-        _populationDisplay.setPosition(100,100);
-        _cycleCountDisplay.setPosition(100,1000000);
+
+
     }
     sf::Vector2i getMousePos();
     bool   ChangeCell(int index,Celltype type);
@@ -78,8 +77,7 @@ public:
     std::vector<Cell*> getCellNeighbours(int index);
     void   LifeCycle();
     void   genPop();
-    void   displayPop();
-    void   displayCycleCount();
+
 
     Cell* getTopCell        (int index);
     Cell* getBottomCell     (int index);
